@@ -16,5 +16,11 @@ namespace Fatura
         {
             InitializeComponent();
         }
+
+        private void ilEkleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormIL f = new FormIL();
+            f.Show();
+        }
     }
 }
