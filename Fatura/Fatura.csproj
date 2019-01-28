@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entity\Birim.cs" />
+    <Compile Include="Entity\FaturaDetay.cs" />
     <Compile Include="Entity\FaturaMaster.cs" />
     <Compile Include="Entity\IL.cs" />
     <Compile Include="Entity\Ilce.cs" />

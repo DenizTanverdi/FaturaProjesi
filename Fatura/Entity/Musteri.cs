@@ -11,6 +11,11 @@ namespace Fatura.Entity
     [Table("Musteri")]
     public class Musteri
     {
+        public Musteri()
+        {
+            this.FaturaMaster = new HashSet<FaturaMaster>();
+
+        }
         [Key]
         public int musteriId { get; set; }
         public string musteriAdi { get; set; }
@@ -18,6 +23,6 @@ namespace Fatura.Entity
         public string musteriAdresi { get; set; }
         public virtual Ilce ilce { get; set; }
 
-        public virtual ICollection<FaturaMaster> FaturaMasters { get; set; }
+        public virtual ICollection<FaturaMaster> FaturaMaster { get; set; }
     }
 }

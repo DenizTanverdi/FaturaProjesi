@@ -11,6 +11,10 @@ namespace Fatura.Entity
     [Table("IL")]
     public class IL
     {
+        public IL()
+        {
+            this.ilce = new HashSet<Ilce>();
+        }
         [Key]
         public int ILId { get; set; }
         public string ILAdi { get; set; }

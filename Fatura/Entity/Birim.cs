@@ -11,6 +11,10 @@ namespace Fatura.Entity
     [Table("Birim")]
     public class Birim
     {
+        public Birim()
+        {
+            this.urun = new HashSet<Urunler>();
+        }
         [Key]
         public int birimId { get; set; }
         public string birimAdi { get; set; }

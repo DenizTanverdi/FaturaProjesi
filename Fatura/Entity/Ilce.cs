@@ -12,6 +12,10 @@ namespace Fatura.Entity
     [Table("Ilce")]
     public class Ilce
     {
+        public Ilce()
+        {
+            this.musteri = new HashSet<Musteri>();
+        }
         [Key]
         public int IlceId { get; set; }
         public string IlceAdi { get; set; }

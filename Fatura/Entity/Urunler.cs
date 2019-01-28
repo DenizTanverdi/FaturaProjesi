@@ -12,6 +12,10 @@ namespace Fatura.Entity
     [Table("Urun")]
     public class Urunler
     {
+        public Urunler()
+        {
+            this.faturaDetay = new HashSet<FaturaDetay>();
+        }
         [Key]
         public int urunId { get; set; }
         public string urunAdi { get; set; }
@@ -19,6 +23,7 @@ namespace Fatura.Entity
         public int birimId { get; set; }
         public decimal birimFiyat { get; set; }
         public virtual  Birim birim { get; set; }
+        public virtual ICollection<FaturaDetay> faturaDetay { get; set; }
 
     }
 }
