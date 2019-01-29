@@ -22,5 +22,12 @@ namespace Fatura
             FormIL f = new FormIL();
             f.Show();
         }
+
+        private void ilceEkleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ilce ilce = new ilce();
+            ilce.Show();
+
+        }
     }
 }

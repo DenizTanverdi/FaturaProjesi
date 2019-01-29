@@ -94,6 +94,7 @@
             this.ilceEkleToolStripMenuItem.Name = "ilceEkleToolStripMenuItem";
             this.ilceEkleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ilceEkleToolStripMenuItem.Text = "İlce Ekle";
+            this.ilceEkleToolStripMenuItem.Click += new System.EventHandler(this.ilceEkleToolStripMenuItem_Click);
             // 
             // faturaİşlemleriToolStripMenuItem
             // 
