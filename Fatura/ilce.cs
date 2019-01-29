@@ -23,6 +23,7 @@ namespace Fatura
         {
             ComboBoxListele();
 
+            Listele();
         }
         public void ComboBoxListele()
         {
@@ -31,6 +32,29 @@ namespace Fatura
             comboBox1.DisplayMember = "ILAdi";
             comboBox1.ValueMember = "ILId";
 
+        }
+        public void Listele()
+        {
+            try
+            {
+                var list=db.ilce.Select(x=>new { x.IlceId, x.ILId,x.IlceAdi,SehirAdi=x.il.ILAdi })
+                    .Where(x=>x.ILId==Int32.Parse(comboBox1.SelectedValue.ToString()))
+                    .OrderBy(x=>x.SehirAdi).ToList();
+                //2.listeme yöntemi
+                var list2 = from i in db.ilce
+                            where i.ILId == Int32.Parse(comboBox1.SelectedValue.ToString())
+                            select new { i.ILId, i.IlceId, i.il.ILAdi, i.IlceAdi };
+                dataGridView1.DataSource = list2;
+                dataGridView1.Columns[0].Visible = false;
+                dataGridView1.Columns[1].Visible = false;
+                txtBxIlce.Clear();
+                txtBxIlce.Focus();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }

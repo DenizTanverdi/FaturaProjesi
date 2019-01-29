@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtBxIl = new System.Windows.Forms.TextBox();
+            this.txtBxIlce = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
@@ -41,12 +41,12 @@
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // txtBxIl
+            // txtBxIlce
             // 
-            this.txtBxIl.Location = new System.Drawing.Point(177, 25);
-            this.txtBxIl.Name = "txtBxIl";
-            this.txtBxIl.Size = new System.Drawing.Size(121, 20);
-            this.txtBxIl.TabIndex = 11;
+            this.txtBxIlce.Location = new System.Drawing.Point(177, 25);
+            this.txtBxIlce.Name = "txtBxIlce";
+            this.txtBxIlce.Size = new System.Drawing.Size(121, 20);
+            this.txtBxIlce.TabIndex = 11;
             // 
             // label1
             // 
@@ -128,7 +128,7 @@
             this.ClientSize = new System.Drawing.Size(490, 450);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtBxIl);
+            this.Controls.Add(this.txtBxIlce);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
@@ -144,7 +144,7 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtBxIl;
+        private System.Windows.Forms.TextBox txtBxIlce;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
