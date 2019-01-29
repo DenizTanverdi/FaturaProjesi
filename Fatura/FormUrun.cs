@@ -8,13 +8,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Fatura.Entity;
 
 namespace Fatura
 {
-    public partial class Urun : Form
+    public partial class FormUrun : Form
     {
         FaturaContext db = new FaturaContext();
-        public Urun()
+        public FormUrun()
         {
             InitializeComponent();
         }
@@ -22,6 +23,7 @@ namespace Fatura
         private void Urun_Load(object sender, EventArgs e)
         {
             ComboBoxListele();
+            Listele();
         }
         public void ComboBoxListele()
         {
@@ -30,8 +32,8 @@ namespace Fatura
                 var list = db.birim.Select(x => new { x.birimId, x.birimAdi })
                     .OrderBy(x => x.birimAdi).ToList();
 
-                comboBox1.DisplayMember = "birimId";
-                comboBox1.ValueMember = "birimAdi";
+                comboBox1.DisplayMember = "birimAdi";
+                comboBox1.ValueMember = "birimId";
                 comboBox1.DataSource = list;
             }
             catch (Exception ex)
@@ -45,18 +47,33 @@ namespace Fatura
 
         private void button1_Click(object sender, EventArgs e)
         {
+            try
+            {
+                Urunler urn = new Urunler();
+                urn.urunKodu = txtBxKod.Text;
+                urn.urunAdi = txtBxAd.Text;
+                urn.birimId = (int)comboBox1.SelectedValue;
+                urn.birimFiyat =Convert.ToDecimal(txtBxBirimF.Text);
+                db.urun.Add(urn);
+                db.SaveChanges();
 
+
+            }
+            catch (Exception ex)
+            {
+
+                string str = ex.Message;
+            }
+            Listele();
         }
         public void Listele()
         {
             try
             {
-                var list = db.urun.Select(x => new { x.urunId, x.urunKodu,x.urunAdi,x.birimFiyat })
-                    .OrderBy(x => x.birimAdi).ToList();
+                var list = db.urun.Select(x => new { x.urunId, x.urunKodu,x.urunAdi,x.birimFiyat,x.birim.birimAdi })
+                    .ToList();
 
-                comboBox1.DisplayMember = "birimId";
-                comboBox1.ValueMember = "birimAdi";
-                comboBox1.DataSource = list;
+                dataGridView1.DataSource = list;
             }
             catch (Exception ex)
             {

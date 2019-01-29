@@ -1,6 +1,6 @@
 ﻿namespace Fatura
 {
-    partial class Urun
+    partial class FormUrun
     {
         /// <summary>
         /// Required designer variable.
@@ -30,9 +30,9 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtBxBirimF = new System.Windows.Forms.TextBox();
+            this.txtBxAd = new System.Windows.Forms.TextBox();
+            this.txtBxKod = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -61,26 +61,26 @@
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 16;
             // 
-            // textBox3
+            // txtBxBirimF
             // 
-            this.textBox3.Location = new System.Drawing.Point(182, 135);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(121, 20);
-            this.textBox3.TabIndex = 15;
+            this.txtBxBirimF.Location = new System.Drawing.Point(182, 135);
+            this.txtBxBirimF.Name = "txtBxBirimF";
+            this.txtBxBirimF.Size = new System.Drawing.Size(121, 20);
+            this.txtBxBirimF.TabIndex = 15;
             // 
-            // textBox2
+            // txtBxAd
             // 
-            this.textBox2.Location = new System.Drawing.Point(182, 71);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(121, 20);
-            this.textBox2.TabIndex = 14;
+            this.txtBxAd.Location = new System.Drawing.Point(182, 71);
+            this.txtBxAd.Name = "txtBxAd";
+            this.txtBxAd.Size = new System.Drawing.Size(121, 20);
+            this.txtBxAd.TabIndex = 14;
             // 
-            // textBox1
+            // txtBxKod
             // 
-            this.textBox1.Location = new System.Drawing.Point(182, 37);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 20);
-            this.textBox1.TabIndex = 13;
+            this.txtBxKod.Location = new System.Drawing.Point(182, 37);
+            this.txtBxKod.Name = "txtBxKod";
+            this.txtBxKod.Size = new System.Drawing.Size(121, 20);
+            this.txtBxKod.TabIndex = 13;
             // 
             // label4
             // 
@@ -157,22 +157,22 @@
             this.groupBox1.TabIndex = 20;
             this.groupBox1.TabStop = false;
             // 
-            // Urun
+            // FormUrun
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(427, 450);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtBxBirimF);
+            this.Controls.Add(this.txtBxAd);
+            this.Controls.Add(this.txtBxKod);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "Urun";
+            this.Name = "FormUrun";
             this.Text = "Urun";
             this.Load += new System.EventHandler(this.Urun_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -185,9 +185,9 @@
         #endregion
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtBxBirimF;
+        private System.Windows.Forms.TextBox txtBxAd;
+        private System.Windows.Forms.TextBox txtBxKod;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;

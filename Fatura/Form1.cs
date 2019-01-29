@@ -38,7 +38,7 @@ namespace Fatura
 
         private void urunEkleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Urun urn = new Urun();
+            FormUrun urn = new FormUrun();
             urn.Show();
         }
     }
