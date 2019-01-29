@@ -15,6 +15,7 @@ namespace Fatura
     public partial class FormUrun : Form
     {
         FaturaContext db = new FaturaContext();
+        int secilenId;
         public FormUrun()
         {
             InitializeComponent();
@@ -62,7 +63,7 @@ namespace Fatura
             catch (Exception ex)
             {
 
-                string str = ex.Message;
+                string str ="Bütün Alanları Doldurunuz.";
             }
             Listele();
         }
@@ -81,6 +82,44 @@ namespace Fatura
                 throw;
             }
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Urunler u = db.urun.Find(secilenId);
+            u.urunAdi = txtBxAd.Text;
+            u.urunKodu = txtBxKod.Text;
+            u.birimFiyat = Convert.ToDecimal(txtBxBirimF.Text);
+            u.birim.birimId = (int)comboBox1.SelectedValue;
+            db.SaveChanges();
+            Listele();
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                secilenId = (int)dataGridView1.CurrentRow.Cells[0].Value;
+                Urunler u = db.urun.Find(secilenId);
+                txtBxAd.Text = u.urunAdi;
+                txtBxBirimF.Text = (u.birimFiyat).ToString();
+                txtBxKod.Text = u.urunKodu;
+                comboBox1.SelectedValue = u.birim.birimAdi;
+            }
+            catch (Exception)
+            {
+
+                return;
+            }
+           
+                   }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Urunler u = db.urun.Find(secilenId);
+            db.urun.Remove(u);
+            db.SaveChanges();
+            Listele();
         }
     }
 }
