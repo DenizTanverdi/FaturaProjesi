@@ -104,7 +104,7 @@ namespace Fatura
                 txtBxAd.Text = u.urunAdi;
                 txtBxBirimF.Text = (u.birimFiyat).ToString();
                 txtBxKod.Text = u.urunKodu;
-                comboBox1.SelectedValue = u.birim.birimAdi;
+                comboBox1.SelectedValue = u.birim.birimId;
             }
             catch (Exception)
             {

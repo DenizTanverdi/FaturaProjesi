@@ -41,5 +41,11 @@ namespace Fatura
             FormUrun urn = new FormUrun();
             urn.Show();
         }
+
+        private void müsteriToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MusteriForm frm = new MusteriForm();
+            frm.Show();
+        }
     }
 }
