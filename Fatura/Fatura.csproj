@@ -105,6 +105,7 @@
     <Compile Include="FormUrun.Designer.cs">
       <DependentUpon>FormUrun.cs</DependentUpon>
     </Compile>
+    <Compile Include="SecilenUrun.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
