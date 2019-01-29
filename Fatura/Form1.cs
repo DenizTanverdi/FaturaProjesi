@@ -29,5 +29,17 @@ namespace Fatura
             ilce.Show();
 
         }
+
+        private void birimEkleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormBirim frm = new FormBirim();
+            frm.Show();
+        }
+
+        private void urunEkleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Urun urn = new Urun();
+            urn.Show();
+        }
     }
 }
