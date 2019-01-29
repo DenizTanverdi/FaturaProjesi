@@ -101,6 +101,9 @@ namespace Fatura
             var musteri = db.musteri.Find(secilenId);
             txtBxAdres.Text = musteri.musteriAdresi;
             txtBxUnvan.Text = musteri.musteriAdi;
+            cmbxSehir.SelectedValue = musteri.ilce.ILId;
+            cmbxIlce.SelectedValue = musteri.ilceId;
+           
         }
     }
 }

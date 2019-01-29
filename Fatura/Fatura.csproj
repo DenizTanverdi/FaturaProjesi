@@ -79,6 +79,12 @@
     <Compile Include="FormIL.Designer.cs">
       <DependentUpon>FormIL.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormYeni.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormYeni.Designer.cs">
+      <DependentUpon>FormYeni.cs</DependentUpon>
+    </Compile>
     <Compile Include="ilce.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormIL.resx">
       <DependentUpon>FormIL.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormYeni.resx">
+      <DependentUpon>FormYeni.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ilce.resx">
       <DependentUpon>ilce.cs</DependentUpon>

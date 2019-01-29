@@ -35,6 +35,7 @@ namespace Fatura
                 comboBox1.DisplayMember = "ILAdi";
                 comboBox1.ValueMember = "ILId";
                 comboBox1.DataSource = list;
+
             }
             catch (Exception ex )
             {
