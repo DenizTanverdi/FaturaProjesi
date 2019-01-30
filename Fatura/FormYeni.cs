@@ -145,7 +145,7 @@ namespace Fatura
             {
                 faturaMasterKaydet();
                 faturaDetayKaydet();
-              
+                tran.Commit();
             }
             catch (Exception)
             {

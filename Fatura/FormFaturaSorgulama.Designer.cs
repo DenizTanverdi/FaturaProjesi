@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.comboSehir = new System.Windows.Forms.ComboBox();
-            this.comboİlce = new System.Windows.Forms.ComboBox();
+            this.comboIlce = new System.Windows.Forms.ComboBox();
             this.comboMusteri = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -49,14 +49,16 @@
             this.comboSehir.Name = "comboSehir";
             this.comboSehir.Size = new System.Drawing.Size(121, 21);
             this.comboSehir.TabIndex = 0;
+            this.comboSehir.SelectedIndexChanged += new System.EventHandler(this.comboSehir_SelectedIndexChanged);
             // 
-            // comboİlce
+            // comboIlce
             // 
-            this.comboİlce.FormattingEnabled = true;
-            this.comboİlce.Location = new System.Drawing.Point(341, 82);
-            this.comboİlce.Name = "comboİlce";
-            this.comboİlce.Size = new System.Drawing.Size(121, 21);
-            this.comboİlce.TabIndex = 1;
+            this.comboIlce.FormattingEnabled = true;
+            this.comboIlce.Location = new System.Drawing.Point(341, 82);
+            this.comboIlce.Name = "comboIlce";
+            this.comboIlce.Size = new System.Drawing.Size(121, 21);
+            this.comboIlce.TabIndex = 1;
+            this.comboIlce.SelectedIndexChanged += new System.EventHandler(this.comboIlce_SelectedIndexChanged);
             // 
             // comboMusteri
             // 
@@ -65,6 +67,7 @@
             this.comboMusteri.Name = "comboMusteri";
             this.comboMusteri.Size = new System.Drawing.Size(121, 21);
             this.comboMusteri.TabIndex = 2;
+            this.comboMusteri.SelectedIndexChanged += new System.EventHandler(this.comboMusteri_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -108,15 +111,17 @@
             this.txtBxFaturaNo.Name = "txtBxFaturaNo";
             this.txtBxFaturaNo.Size = new System.Drawing.Size(100, 20);
             this.txtBxFaturaNo.TabIndex = 4;
+            this.txtBxFaturaNo.TextChanged += new System.EventHandler(this.txtBxFaturaNo_TextChanged);
             // 
             // btnGetir
             // 
-            this.btnGetir.Location = new System.Drawing.Point(533, 43);
+            this.btnGetir.Location = new System.Drawing.Point(533, 38);
             this.btnGetir.Name = "btnGetir";
             this.btnGetir.Size = new System.Drawing.Size(115, 101);
             this.btnGetir.TabIndex = 5;
             this.btnGetir.Text = "Tüm Siparişleri Getir";
             this.btnGetir.UseVisualStyleBackColor = true;
+            this.btnGetir.Click += new System.EventHandler(this.btnGetir_Click);
             // 
             // dataGridView1
             // 
@@ -151,7 +156,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboMusteri);
-            this.Controls.Add(this.comboİlce);
+            this.Controls.Add(this.comboIlce);
             this.Controls.Add(this.comboSehir);
             this.Name = "FormFaturaSorgulama";
             this.Text = "FormFaturaSorgulama";
@@ -165,7 +170,7 @@
         #endregion
 
         private System.Windows.Forms.ComboBox comboSehir;
-        private System.Windows.Forms.ComboBox comboİlce;
+        private System.Windows.Forms.ComboBox comboIlce;
         private System.Windows.Forms.ComboBox comboMusteri;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
