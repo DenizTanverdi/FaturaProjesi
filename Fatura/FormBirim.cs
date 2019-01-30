@@ -72,7 +72,7 @@ namespace Fatura
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             secilenId = Int32.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
-            txtBxBirim.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            //txtBxBirim.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
         }
 
         private void button3_Click(object sender, EventArgs e)

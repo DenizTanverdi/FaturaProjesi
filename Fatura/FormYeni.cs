@@ -28,12 +28,13 @@ namespace Fatura
         {
             MusteriSehriDoldur();
             urunDoldur();
+            MusteriDoldur();
 
         }
 
         private void urunDoldur()
         {
-            var list = db.urun.OrderBy(I => I.urunAdi).Select(I => new { I.urunId, I.urunAdi });
+            var list = db.urun.OrderBy(I => I.urunAdi).Select(I => new { I.urunId, I.urunAdi }).ToList();
             comboUrunAdi.ValueMember = "UrunId";
             comboUrunAdi.DisplayMember = "UrunAdi";
             comboUrunAdi.DataSource = list;
@@ -41,7 +42,7 @@ namespace Fatura
 
         private void MusteriSehriDoldur()
         {
-            var list = db.il.ToList();
+            var list = db.il.Select(I=>I).ToList();
             comboSehir.ValueMember = "ILId";
             comboSehir.DisplayMember = "ILAdi";
             comboSehir.DataSource = list;
@@ -71,6 +72,7 @@ namespace Fatura
                     miktar = Convert.ToDecimal(UrunMiktari.Value),
                     toplamTutar = Convert.ToDecimal(textUrunFiyati.Text) * Convert.ToDecimal(UrunMiktari.Value)
                 });
+            listele();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -155,11 +157,23 @@ namespace Fatura
 
         private void faturaDetayKaydet()
         {
-            FaturaDetay dty = new FaturaDetay();
-            dty.urunId = (int)comboUrunAdi.SelectedValue;
-            dty.faturaId=
-        dty.
-                }
+
+            foreach (SecilenUrun item in urunListesi)
+            {
+
+                FaturaDetay fd = new FaturaDetay();
+                fd.faturaId = Convert.ToInt32(label1.Text);
+                fd.urunId = item.UrunId;
+                fd.miktar = item.miktar;
+                fd.KDV = item.Kdv;
+                fd.ToplamFiyat = item.miktar * item.urunFiyat;
+                fd.KDVliFiyat = fd.ToplamFiyat+(fd.ToplamFiyat * fd.KDV/100);
+                db.faturadetay.Add(fd);
+                db.SaveChanges();
+                MessageBox.Show("Hele Şükür Bitti.");
+            }
+
+        }
 
         private void faturaMasterKaydet()
         {
@@ -171,6 +185,55 @@ namespace Fatura
             db.SaveChanges();
             label1.Text = fm.faturaId.ToString();
 
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Columns.Clear();
+            urunListesi.Clear();
+        }
+
+        private void comboUrunAdi_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var u = db.urun.Find((int)comboUrunAdi.SelectedValue);
+            decimal fiyat =u.birimFiyat;
+            textUrunFiyati.Text = fiyat.ToString();
+            textBrim.Text = u.birim.birimAdi.ToString();
+            textKdv.Text = "8";
+           
+        }
+
+        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            secilenId = (int)dataGridView1.CurrentRow.Cells[0].Value;
+            var urun = urunListesi.Where(x => x.UrunId == secilenId).FirstOrDefault();
+            comboUrunAdi.SelectedValue = secilenId;
+            UrunMiktari.Value = urun.miktar;
+        }
+
+        private void comboMusteri_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MusteriDoldur();
+        }
+
+        private void MusteriDoldur()
+        {
+            var mlist = db.musteri.Where(I => I.ilceId == (int)comboİlce.SelectedValue).OrderBy(I => I.musteriAdi).Select(I => new { I.ilceId, I.musteriId, I.musteriAdi }).ToList() ;
+            if (mlist.Count!=0)
+            {
+                comboMusteri.DisplayMember = "musteriAdi";
+                comboMusteri.ValueMember = "musteriId";
+                comboMusteri.DataSource = mlist;
+            }
+            else
+            {
+                comboMusteri.DataSource = null;
+            }
+        }
+
+        private void comboİlce_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            MusteriDoldur();
         }
     }
 }

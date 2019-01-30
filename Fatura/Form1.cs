@@ -50,6 +50,11 @@ namespace Fatura
 
         private void görüntüleSorgulaDüzenleToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void yeniFaturaOluşturToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             FormYeni frm = new FormYeni();
             frm.Show();
         }

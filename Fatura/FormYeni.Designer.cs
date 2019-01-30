@@ -105,6 +105,7 @@
             this.comboMusteri.Name = "comboMusteri";
             this.comboMusteri.Size = new System.Drawing.Size(200, 21);
             this.comboMusteri.TabIndex = 3;
+            this.comboMusteri.SelectedIndexChanged += new System.EventHandler(this.comboMusteri_SelectedIndexChanged);
             // 
             // comboİlce
             // 
@@ -113,6 +114,7 @@
             this.comboİlce.Name = "comboİlce";
             this.comboİlce.Size = new System.Drawing.Size(200, 21);
             this.comboİlce.TabIndex = 2;
+            this.comboİlce.SelectedIndexChanged += new System.EventHandler(this.comboİlce_SelectedIndexChanged);
             // 
             // comboSehir
             // 
@@ -264,6 +266,7 @@
             this.comboUrunAdi.Name = "comboUrunAdi";
             this.comboUrunAdi.Size = new System.Drawing.Size(200, 21);
             this.comboUrunAdi.TabIndex = 6;
+            this.comboUrunAdi.SelectedIndexChanged += new System.EventHandler(this.comboUrunAdi_SelectedIndexChanged);
             // 
             // label11
             // 
@@ -327,6 +330,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(606, 226);
             this.dataGridView1.TabIndex = 14;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
             // button5
             // 
@@ -336,6 +340,7 @@
             this.button5.TabIndex = 15;
             this.button5.Text = "Liste Temizle";
             this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // labeltoplam
             // 

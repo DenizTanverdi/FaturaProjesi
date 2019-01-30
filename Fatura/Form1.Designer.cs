@@ -120,6 +120,7 @@
             this.yeniFaturaOluşturToolStripMenuItem.Name = "yeniFaturaOluşturToolStripMenuItem";
             this.yeniFaturaOluşturToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
             this.yeniFaturaOluşturToolStripMenuItem.Text = "Yeni Fatura Oluştur";
+            this.yeniFaturaOluşturToolStripMenuItem.Click += new System.EventHandler(this.yeniFaturaOluşturToolStripMenuItem_Click);
             // 
             // Form1
             // 

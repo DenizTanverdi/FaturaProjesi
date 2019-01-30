@@ -90,7 +90,7 @@ namespace Fatura
             u.urunAdi = txtBxAd.Text;
             u.urunKodu = txtBxKod.Text;
             u.birimFiyat = Convert.ToDecimal(txtBxBirimF.Text);
-            u.birim.birimId = (int)comboBox1.SelectedValue;
+           u.birimId = (int)comboBox1.SelectedValue;
             db.SaveChanges();
             Listele();
         }
