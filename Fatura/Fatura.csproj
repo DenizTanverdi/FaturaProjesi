@@ -73,6 +73,12 @@
     <Compile Include="FormBirim.Designer.cs">
       <DependentUpon>FormBirim.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormFaturaSorgulama.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFaturaSorgulama.Designer.cs">
+      <DependentUpon>FormFaturaSorgulama.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormIL.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormBirim.resx">
       <DependentUpon>FormBirim.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFaturaSorgulama.resx">
+      <DependentUpon>FormFaturaSorgulama.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormIL.resx">
       <DependentUpon>FormIL.cs</DependentUpon>
