@@ -67,35 +67,35 @@
             // müsteriToolStripMenuItem
             // 
             this.müsteriToolStripMenuItem.Name = "müsteriToolStripMenuItem";
-            this.müsteriToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.müsteriToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.müsteriToolStripMenuItem.Text = "Müsteri  Ekle";
             this.müsteriToolStripMenuItem.Click += new System.EventHandler(this.müsteriToolStripMenuItem_Click);
             // 
             // birimEkleToolStripMenuItem
             // 
             this.birimEkleToolStripMenuItem.Name = "birimEkleToolStripMenuItem";
-            this.birimEkleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.birimEkleToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.birimEkleToolStripMenuItem.Text = "Birim Ekle";
             this.birimEkleToolStripMenuItem.Click += new System.EventHandler(this.birimEkleToolStripMenuItem_Click);
             // 
             // urunEkleToolStripMenuItem
             // 
             this.urunEkleToolStripMenuItem.Name = "urunEkleToolStripMenuItem";
-            this.urunEkleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.urunEkleToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.urunEkleToolStripMenuItem.Text = "Urun Ekle";
             this.urunEkleToolStripMenuItem.Click += new System.EventHandler(this.urunEkleToolStripMenuItem_Click);
             // 
             // ilEkleToolStripMenuItem
             // 
             this.ilEkleToolStripMenuItem.Name = "ilEkleToolStripMenuItem";
-            this.ilEkleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ilEkleToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.ilEkleToolStripMenuItem.Text = "İl Ekle";
             this.ilEkleToolStripMenuItem.Click += new System.EventHandler(this.ilEkleToolStripMenuItem_Click);
             // 
             // ilceEkleToolStripMenuItem
             // 
             this.ilceEkleToolStripMenuItem.Name = "ilceEkleToolStripMenuItem";
-            this.ilceEkleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ilceEkleToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
             this.ilceEkleToolStripMenuItem.Text = "İlce Ekle";
             this.ilceEkleToolStripMenuItem.Click += new System.EventHandler(this.ilceEkleToolStripMenuItem_Click);
             // 
@@ -113,6 +113,7 @@
             this.görüntüleSorgulaDüzenleToolStripMenuItem.Name = "görüntüleSorgulaDüzenleToolStripMenuItem";
             this.görüntüleSorgulaDüzenleToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
             this.görüntüleSorgulaDüzenleToolStripMenuItem.Text = "Görüntüle/Sorgula/Düzenle";
+            this.görüntüleSorgulaDüzenleToolStripMenuItem.Click += new System.EventHandler(this.görüntüleSorgulaDüzenleToolStripMenuItem_Click);
             // 
             // yeniFaturaOluşturToolStripMenuItem
             // 

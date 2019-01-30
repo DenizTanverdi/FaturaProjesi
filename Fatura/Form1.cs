@@ -47,5 +47,11 @@ namespace Fatura
             MusteriForm frm = new MusteriForm();
             frm.Show();
         }
+
+        private void görüntüleSorgulaDüzenleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormYeni frm = new FormYeni();
+            frm.Show();
+        }
     }
 }
